@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <title>ToDo List - Vijay</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="time-wrapper">
+          <div class="clock">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+          </div>
+          <div class="day-date-wrap">
+            <div id="date">test</div>
+            <div id="day">test</div>
+          </div>
+        </div>
+
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/icon.png" alt="todo icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your Text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                
+            </ul>
+            <div class="text-audio-wrap">
+                <select name="" id="voice-option"></select>
+                <button id="listen-btn"> <img src="images//play.png" alt="play">Listen Task</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/date-time.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/text-speech.js"></script>
+  </body>
+</html>

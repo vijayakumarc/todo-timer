@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-image: linear-gradient(rgb(103, 4, 188), rgb(25, 0, 126)); 
+  position: relative;
+}
+
+.container {
+    width: 100%;
+  max-width: 600px;
+  height: 180px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+  
+}
+.time-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+    flex-direction: column;
+    box-shadow:0px 0px 25px rgba(0, 0, 0, 0.25);
+     color: #fff;;
+}
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: #e18000;
+    border-radius: 5px;
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    z-index: -1;
+}
+.container::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: #c60d7f;
+    border-radius: 5px;
+    position: absolute;
+    right:  -30px;
+    bottom: 15px;
+    z-index: -1;
+}
+
+.clock span{
+    font-size:60px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    line-height: 1.6;
+}
+
+.clock span::after{    
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#hours::after{
+    content: "HOURS";
+}
+#min::after{
+    content: "MINS";
+}
+#sec::after{
+    content: "SEC";
+}
+
+.day-date-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px 25px 0;
+}
+
+#day,#date{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #c60d7f;
+
+}
+
+
+.todo-app{
+    width: 100%;
+    max-width:540px ;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+
+}
+
+.todo-app h2{
+    color: rgb(25, 0, 126);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-image: linear-gradient(45deg, #310191, #c60d7f);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("../images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #747474;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("../images/checked.png");
+}
+
+ul li .task-list-close{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #747474;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li .task-list-close:hover{
+    background-color: #ccc;
+}
+
+.text-audio-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-audio-wrap button{
+display: flex;
+align-items: center;
+}
+
+.text-audio-wrap button img{
+    width: 16px;
+    margin-right: 10px;
+}
+
+select{
+    flex: 1;
+    color: #5c5c5c;
+    background-color: #edeef0;
+    height: 50px;
+    padding: 0 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 35px;
+    appearance: none;
+    margin-right: 20px;
+    background-image: url("../images/dropdown.png");
+    background-position-x: calc(100% - 20px);
+    background-position-y:20px;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
